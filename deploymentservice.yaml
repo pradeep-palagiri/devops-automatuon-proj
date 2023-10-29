@@ -19,7 +19,11 @@ spec:
         image: pradeeppalagiri/javaapps1:latest
         ports:
         - containerPort: 3001
-        
+
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
         
 ---
 
