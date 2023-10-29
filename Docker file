@@ -1,0 +1,6 @@
+FROM openjdk:8-jdk-alpine
+MAINTAINER Pradeep
+RUN mkdir -p /tmp/javaapp/builds
+COPY target/*.jar $PROJECT_HOME/app.jar
+WORKDIR $PROJECT_HOME
+ENTRYPOINT ["java", "-jar", "/tmp/javaapp/builds/app.jar"]
