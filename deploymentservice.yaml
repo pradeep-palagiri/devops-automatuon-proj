@@ -19,7 +19,7 @@ spec:
         image: pradeeppalagiri/helloworld:latest
         ports:
         - containerPort: 3001
-          imagePullPolicy: Always # first checks in local and then pulls from docker hub
+          
         resources:
           limits:
             memory: "512Mi"
