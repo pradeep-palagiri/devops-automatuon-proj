@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: hello-world
   labels:
-    app: nodeapp
+    app: hello-world
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: hello-world
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: hello-world
     spec:
       containers:
       - name: javaserver
-        image: pradeeppalagiri/javaapp:latest
+        image: pradeeppalagiri/javaapps1:latest
         ports:
         - containerPort: 3000
         
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: javaapp-service
+  name: hello-world
 spec:
   selector:
-    app: javaapp 
+    app: hello-world
   type: NodePort
   ports:
   - protocol: TCP
