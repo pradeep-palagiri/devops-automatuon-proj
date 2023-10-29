@@ -1,5 +1,3 @@
-FROM openjdk:8-jdk-alpine
+FROM hello-world
 MAINTAINER Pradeep
 COPY target/*.jar $PROJECT_HOME/app.jar
-WORKDIR $PROJECT_HOME
-ENTRYPOINT ["java", "-jar",]
