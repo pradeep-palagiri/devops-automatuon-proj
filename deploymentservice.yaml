@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: javaserver
-        image: pradeeppalagiri/javaapps1:latest
+        image: pradeeppalagiri/helloworld:latest
         ports:
         - containerPort: 3001
 
