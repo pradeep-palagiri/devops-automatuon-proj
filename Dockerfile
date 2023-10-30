@@ -1,2 +1,2 @@
-FROM java:latest
+FROM java
 CMD echo "Hello World!"
