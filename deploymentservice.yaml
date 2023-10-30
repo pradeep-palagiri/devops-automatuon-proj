@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: hello-world
 spec:
   containers:
-  - name: nginx
+  - name: hello-world
     image: pradeeppalagiri/helloworld:latest
     ports:
-    - containerPort: 80
+    - containerPort: 8090
