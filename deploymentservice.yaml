@@ -1,45 +1,10 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hello-world1
-  labels:
-    app: hello-world
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: hello-world
-  template:
-    metadata:
-      labels:
-        app: hello-world
-    spec:
-      containers:
-      - name: javaserver
-        image: pradeeppalagiri/helloworld:latest
-        ports:
-        - containerPort: 3002
-
-        resources:
-            limits:
-              #memory: "128Mi"
-              cpu: "250m"
-            requests:
-              memory: "64Mi"
-              cpu: "100m"
----
-
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
-  name: hello-world
+  name: nginx
 spec:
-  selector:
-    app: hello-world
-  type: NodePort
-  ports:
-  - protocol: TCP
-    port: 5000
-    targetPort: 3002
-    nodePort: 31111
-
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
