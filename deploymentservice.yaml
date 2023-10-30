@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: javaserver
-        image: pradeeppalagiri/helloworld:latest
+        image: hello-world
         ports:
         - containerPort: 3001
         
