@@ -1,3 +1,2 @@
-FROM alpine
-COPY target/*.jar $PROJECT_HOME/app.jar
+FROM java:latest
 CMD echo "Hello World!"
