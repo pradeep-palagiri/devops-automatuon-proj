@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 3001
           
-      resources:
+        resources:
             limits:
               #memory: "128Mi"
               cpu: "250m"
