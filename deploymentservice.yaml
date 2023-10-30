@@ -19,7 +19,14 @@ spec:
         image: pradeeppalagiri/helloworld:latest
         ports:
         - containerPort: 3002
-        
+
+        resources:
+            limits:
+              #memory: "128Mi"
+              cpu: "250m"
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
 ---
 
 apiVersion: v1
